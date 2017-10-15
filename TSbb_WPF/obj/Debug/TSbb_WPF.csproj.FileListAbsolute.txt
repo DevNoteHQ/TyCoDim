@@ -1,0 +1,15 @@
+D:\Coding\Matura\TSbb\TSbb_WPF\bin\Debug\TSbb_WPF.exe.config
+D:\Coding\Matura\TSbb\TSbb_WPF\bin\Debug\TSbb_WPF.exe
+D:\Coding\Matura\TSbb\TSbb_WPF\bin\Debug\TSbb_WPF.pdb
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF.csprojResolveAssemblyReference.cache
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\MainWindow.g.cs
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\App.g.cs
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF_MarkupCompile.cache
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF_MarkupCompile.lref
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\MainWindow.baml
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF.g.resources
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF.Properties.Resources.resources
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF.csproj.GenerateResource.Cache
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF.csproj.CoreCompileInputs.cache
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF.exe
+D:\Coding\Matura\TSbb\TSbb_WPF\obj\Debug\TSbb_WPF.pdb
