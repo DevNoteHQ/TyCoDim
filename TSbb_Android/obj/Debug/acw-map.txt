@@ -1,0 +1,4 @@
+TSbb_Android.MainActivity, TSbb_Android;md5982024bd90879a92a0782198664e2d36.MainActivity
+TSbb_Android.MainActivity, TSbb_Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5982024bd90879a92a0782198664e2d36.MainActivity
+TSbb_Android.MainActivity;md5982024bd90879a92a0782198664e2d36.MainActivity
+tsbb_android.MainActivity;md5982024bd90879a92a0782198664e2d36.MainActivity
