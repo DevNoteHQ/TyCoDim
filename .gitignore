@@ -31,8 +31,6 @@
 *.app
 *.elf
 
-.vs/*
-
 #TSbb_Android:
-TSbb_Android/bin/*
-TSbb_Android/obj/*
+**/bin/
+**/obj/

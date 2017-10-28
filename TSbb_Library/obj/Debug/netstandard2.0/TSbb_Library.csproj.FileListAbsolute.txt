@@ -1,9 +1,0 @@
-D:\Coding\Matura\TSbb\TSbb_Library\bin\Debug\netstandard2.0\TSbb_Library.deps.json
-D:\Coding\Matura\TSbb\TSbb_Library\bin\Debug\netstandard2.0\TSbb_Library.dll
-D:\Coding\Matura\TSbb\TSbb_Library\bin\Debug\netstandard2.0\TSbb_Library.pdb
-D:\Coding\Matura\TSbb\TSbb_Library\obj\Debug\netstandard2.0\TSbb_Library.csprojResolveAssemblyReference.cache
-D:\Coding\Matura\TSbb\TSbb_Library\obj\Debug\netstandard2.0\TSbb_Library.csproj.CoreCompileInputs.cache
-D:\Coding\Matura\TSbb\TSbb_Library\obj\Debug\netstandard2.0\TSbb_Library.AssemblyInfoInputs.cache
-D:\Coding\Matura\TSbb\TSbb_Library\obj\Debug\netstandard2.0\TSbb_Library.AssemblyInfo.cs
-D:\Coding\Matura\TSbb\TSbb_Library\obj\Debug\netstandard2.0\TSbb_Library.dll
-D:\Coding\Matura\TSbb\TSbb_Library\obj\Debug\netstandard2.0\TSbb_Library.pdb
