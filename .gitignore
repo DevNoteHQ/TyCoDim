@@ -31,6 +31,9 @@
 *.app
 *.elf
 
+#HTML
+*.htm
+
 #TSbb_Android:
 **/bin/
 **/obj/
