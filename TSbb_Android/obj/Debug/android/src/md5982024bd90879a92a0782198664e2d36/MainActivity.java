@@ -2,7 +2,7 @@ package md5982024bd90879a92a0782198664e2d36;
 
 
 public class MainActivity
-	extends android.app.Activity
+	extends android.support.v4.app.FragmentActivity
 	implements
 		mono.android.IGCUserPeer
 {

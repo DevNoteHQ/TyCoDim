@@ -1,8 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <Jars></Jars>
-  <ResolvedResourceDirectories />
-  <ResolvedAssetDirectories />
+  <Jars>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Animated.Vector.Drawable\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Annotations\library_project_imports\support-annotations.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Core.UI\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Core.Utils\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Design\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Fragment\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Media.Compat\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Transition\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v4\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.AppCompat\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\bin\classes.jar;D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Vector.Drawable\library_project_imports\bin\classes.jar</Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Design\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Transition\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v4\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.AppCompat\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Android.Support.v4\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
-  <ResolvedResourceDirectoryStamps />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Design.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Transition.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v4.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.AppCompat.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Coding\Matura\TSbb\TSbb_Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
 </Paths>

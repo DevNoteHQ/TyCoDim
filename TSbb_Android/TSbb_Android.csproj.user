@@ -4,5 +4,6 @@
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <SelectedDevice>Android_Accelerated_Nougat</SelectedDevice>
     <DefaultDevice>Android_Accelerated_Nougat</DefaultDevice>
+    <AndroidDesignerPreferredTheme>MyTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
