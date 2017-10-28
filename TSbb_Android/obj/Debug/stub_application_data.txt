@@ -1,2 +1,0 @@
-android.app.Application
-TSbb_Android.TSbb_Android
