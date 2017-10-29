@@ -17,6 +17,8 @@ namespace TSbb_Android.Tabs
 {
     class Eingabe : Fragment
     {
+        public Berechnung Berechnung = new Berechnung();
+
         Spinner BetonSpinner;
         Spinner StahlSpinner;
 
@@ -25,6 +27,12 @@ namespace TSbb_Android.Tabs
         EditText hTräger;
         EditText MEd;
         EditText cnom;
+
+        TextView TPhiBew;
+        TextView TbTräger;
+        TextView ThTräger;
+        TextView TMEd;
+        TextView Tcnom;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -38,6 +46,18 @@ namespace TSbb_Android.Tabs
             hTräger = rootView.FindViewById<EditText>(Resource.Id.hTräger);
             MEd = rootView.FindViewById<EditText>(Resource.Id.MEd);
             cnom = rootView.FindViewById<EditText>(Resource.Id.cnom);
+
+            TPhiBew = rootView.FindViewById<TextView>(Resource.Id.TPhiBew);
+            TbTräger = rootView.FindViewById<TextView>(Resource.Id.TbTräger);
+            ThTräger = rootView.FindViewById<TextView>(Resource.Id.ThTräger);
+            TMEd = rootView.FindViewById<TextView>(Resource.Id.TMEd);
+            Tcnom = rootView.FindViewById<TextView>(Resource.Id.Tcnom);
+
+            TPhiBew.Text = "ΦBew = ";
+            TbTräger.Text = "bTräger = ";
+            ThTräger.Text = "hTräger = ";
+            TMEd.Text = "MEd = ";
+            Tcnom.Text = "cnom = ";
 
             BetonSpinner.ItemSelected += BetonSpinner_ItemSelected;
             StahlSpinner.ItemSelected += StahlSpinner_ItemSelected;
@@ -65,6 +85,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dCnom = Convert.ToDouble(cnom.Text);
                 Calc.Calculate();
+                Berechnung.UpdateBerechnung();
             }
             catch
             {
@@ -78,6 +99,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dMEd = Convert.ToDouble(MEd.Text);
                 Calc.Calculate();
+                Berechnung.UpdateBerechnung();
             }
             catch
             {
@@ -91,6 +113,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dHTräger = Convert.ToDouble(hTräger.Text);
                 Calc.Calculate();
+                Berechnung.UpdateBerechnung();
             }
             catch
             {
@@ -104,6 +127,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dBTräger = Convert.ToDouble(bTräger.Text);
                 Calc.Calculate();
+                Berechnung.UpdateBerechnung();
             }
             catch
             {
@@ -117,6 +141,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dPhiBew = Convert.ToDouble(PhiBew.Text);
                 Calc.Calculate();
+                Berechnung.UpdateBerechnung();
             }
             catch
             {
@@ -138,6 +163,7 @@ namespace TSbb_Android.Tabs
                 default: Calc.iFCK = 12; break;
             }
             Calc.Calculate();
+            Berechnung.UpdateBerechnung();
         }
 
         private void StahlSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -149,6 +175,7 @@ namespace TSbb_Android.Tabs
                 default: Calc.iFYK = 500; break;
             }
             Calc.Calculate();
+            Berechnung.UpdateBerechnung();
         }
     }
 }

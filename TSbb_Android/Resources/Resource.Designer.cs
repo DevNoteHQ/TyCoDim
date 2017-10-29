@@ -2215,7 +2215,7 @@ namespace TSbb_Android
 			public const int EingabeScrollView = 2131165315;
 			
 			// aapt resource value: 0x7f070074
-			public const int Ergebnisse = 2131165300;
+			public const int Ergebnisse1 = 2131165300;
 			
 			// aapt resource value: 0x7f070097
 			public const int MEd = 2131165335;
@@ -2228,6 +2228,21 @@ namespace TSbb_Android
 			
 			// aapt resource value: 0x7f070087
 			public const int StahlSpinner = 2131165319;
+			
+			// aapt resource value: 0x7f070096
+			public const int TMEd = 2131165334;
+			
+			// aapt resource value: 0x7f07008a
+			public const int TPhiBew = 2131165322;
+			
+			// aapt resource value: 0x7f07008e
+			public const int TbTräger = 2131165326;
+			
+			// aapt resource value: 0x7f07009a
+			public const int Tcnom = 2131165338;
+			
+			// aapt resource value: 0x7f070092
+			public const int ThTräger = 2131165330;
 			
 			// aapt resource value: 0x7f0700a2
 			public const int action0 = 2131165346;
@@ -2667,32 +2682,17 @@ namespace TSbb_Android
 			// aapt resource value: 0x7f070051
 			public const int textSpacerNoTitle = 2131165265;
 			
-			// aapt resource value: 0x7f07008a
-			public const int textView10 = 2131165322;
-			
 			// aapt resource value: 0x7f07008c
 			public const int textView11 = 2131165324;
-			
-			// aapt resource value: 0x7f07008e
-			public const int textView12 = 2131165326;
 			
 			// aapt resource value: 0x7f070090
 			public const int textView13 = 2131165328;
 			
-			// aapt resource value: 0x7f070092
-			public const int textView14 = 2131165330;
-			
 			// aapt resource value: 0x7f070094
 			public const int textView15 = 2131165332;
 			
-			// aapt resource value: 0x7f070096
-			public const int textView16 = 2131165334;
-			
 			// aapt resource value: 0x7f070098
 			public const int textView17 = 2131165336;
-			
-			// aapt resource value: 0x7f07009a
-			public const int textView18 = 2131165338;
 			
 			// aapt resource value: 0x7f07009c
 			public const int textView19 = 2131165340;

@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace TSbb_Library
 {
     public static partial class Calc
@@ -20,18 +22,25 @@ namespace TSbb_Library
 
         public static double dDTräger;
         public static double dMd;
-        public static double dZeichen;
+        public static double dZ;
         public static double dAserf;
 
         public static void Calculate()
         {
-            dFCD = iFCK / dYC;
-            dFYD = iFYK / dYS;
-            //Sinlose Berechnungen bzw. Platzhalter:
-            dDTräger = dFCD / dFYD; //dDTräger
-            dMd = dFCD + dFYD; //dMd
-            dZeichen = dFCD * dFYD; //dZeichen
-            dAserf = dFCD - dFYD; //dAserf
+            try
+            {
+                dFCD = iFCK / dYC * 1000;
+                dFYD = iFYK / dYS * 0.1;
+
+                dDTräger = dHTräger - dCnom * 0.01 - 0.0012 * dPhiBew;
+                dMd = dMEd / (dBTräger * dDTräger * dDTräger * dFCD);
+                dZ = 0.5 * (1 + Math.Sqrt(1 - 2.055 * dMd));
+                dAserf = dMEd / (dZ * dDTräger * dFYD);
+            }
+            catch
+            {
+
+            }
         }
     }
 }
