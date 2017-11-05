@@ -4,7 +4,7 @@
     android:minHeight="25px"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/EingabeScrollView">
+    android:id="@+id/InputScrollView">
   <LinearLayout
       android:orientation="vertical"
       android:layout_width="match_parent"

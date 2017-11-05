@@ -20,10 +20,10 @@ namespace TSbb_Library
         public static double dFCD = 0;
         public static double dFYD = 0;
 
-        public static double dDTräger;
-        public static double dMd;
-        public static double dZ;
-        public static double dAserf;
+        public static double dDTräger = 0;
+        public static double dMd = 0;
+        public static double dZ = 0;
+        public static double dAserf = 0;
 
         public static void Calculate()
         {

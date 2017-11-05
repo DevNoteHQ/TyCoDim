@@ -15,9 +15,9 @@ using TSbb_Library;
 
 namespace TSbb_Android.Tabs
 {
-    class Eingabe : Fragment
+    class Input : Fragment
     {
-        public Berechnung Berechnung = new Berechnung();
+        public Calculations Calculation = new Calculations();
 
         Spinner BetonSpinner;
         Spinner StahlSpinner;
@@ -36,7 +36,7 @@ namespace TSbb_Android.Tabs
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View rootView = inflater.Inflate(Resource.Layout.Eingabe, container, false);
+            View rootView = inflater.Inflate(Resource.Layout.Input, container, false);
 
             BetonSpinner = rootView.FindViewById<Spinner>(Resource.Id.BetonSpinner);
             StahlSpinner = rootView.FindViewById<Spinner>(Resource.Id.StahlSpinner);
@@ -85,7 +85,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dCnom = Convert.ToDouble(cnom.Text);
                 Calc.Calculate();
-                Berechnung.UpdateBerechnung();
+                Calculation.UpdateCalculation();
             }
             catch
             {
@@ -99,7 +99,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dMEd = Convert.ToDouble(MEd.Text);
                 Calc.Calculate();
-                Berechnung.UpdateBerechnung();
+                Calculation.UpdateCalculation();
             }
             catch
             {
@@ -113,7 +113,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dHTräger = Convert.ToDouble(hTräger.Text);
                 Calc.Calculate();
-                Berechnung.UpdateBerechnung();
+                Calculation.UpdateCalculation();
             }
             catch
             {
@@ -127,7 +127,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dBTräger = Convert.ToDouble(bTräger.Text);
                 Calc.Calculate();
-                Berechnung.UpdateBerechnung();
+                Calculation.UpdateCalculation();
             }
             catch
             {
@@ -141,7 +141,7 @@ namespace TSbb_Android.Tabs
             {
                 Calc.dPhiBew = Convert.ToDouble(PhiBew.Text);
                 Calc.Calculate();
-                Berechnung.UpdateBerechnung();
+                Calculation.UpdateCalculation();
             }
             catch
             {
@@ -163,7 +163,7 @@ namespace TSbb_Android.Tabs
                 default: Calc.iFCK = 12; break;
             }
             Calc.Calculate();
-            Berechnung.UpdateBerechnung();
+            Calculation.UpdateCalculation();
         }
 
         private void StahlSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -175,7 +175,7 @@ namespace TSbb_Android.Tabs
                 default: Calc.iFYK = 500; break;
             }
             Calc.Calculate();
-            Berechnung.UpdateBerechnung();
+            Calculation.UpdateCalculation();
         }
     }
 }

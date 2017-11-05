@@ -99,8 +99,8 @@
     <Compile Include="PageAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
-    <Compile Include="Tabs\Berechnung.cs" />
-    <Compile Include="Tabs\Eingabe.cs" />
+    <Compile Include="Tabs\Calculations.cs" />
+    <Compile Include="Tabs\Input.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -110,10 +110,10 @@
     <AndroidResource Include="Resources\values\colors.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Eingabe.axml">
+    <AndroidResource Include="Resources\layout\Input.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Berechnung.axml">
+    <AndroidResource Include="Resources\layout\Calculations.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

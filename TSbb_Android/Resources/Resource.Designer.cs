@@ -2202,20 +2202,20 @@ namespace TSbb_Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070073
-			public const int BerechnungScrollView = 2131165299;
-			
 			// aapt resource value: 0x7f070084
 			public const int BetonLabel = 2131165316;
 			
 			// aapt resource value: 0x7f070085
 			public const int BetonSpinner = 2131165317;
 			
-			// aapt resource value: 0x7f070083
-			public const int EingabeScrollView = 2131165315;
+			// aapt resource value: 0x7f070073
+			public const int CalculationScrollView = 2131165299;
 			
 			// aapt resource value: 0x7f070074
 			public const int Ergebnisse1 = 2131165300;
+			
+			// aapt resource value: 0x7f070083
+			public const int InputScrollView = 2131165315;
 			
 			// aapt resource value: 0x7f070097
 			public const int MEd = 2131165335;
@@ -2889,7 +2889,7 @@ namespace TSbb_Android
 			public const int abc_select_dialog_material = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int Berechnung = 2130903067;
+			public const int Calculations = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
 			public const int design_bottom_navigation_item = 2130903068;
@@ -2934,7 +2934,7 @@ namespace TSbb_Android
 			public const int design_text_input_password_icon = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int Eingabe = 2130903082;
+			public const int Input = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
 			public const int Main = 2130903083;

@@ -19,7 +19,7 @@ namespace TSbb_Android
     public class MainActivity : FragmentActivity
     {
         ViewPager viewPager;
-        Eingabe Eingabe = new Eingabe();
+        Input Input = new Input();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -49,8 +49,8 @@ namespace TSbb_Android
             Pager.OffscreenPageLimit = 2;
 
             PageAdapter adapter = new PageAdapter(SupportFragmentManager);
-            adapter.AddFragment(Eingabe, "Eingabe");
-            adapter.AddFragment(Eingabe.Berechnung, "Berechnung");
+            adapter.AddFragment(Input, "Input");
+            adapter.AddFragment(Input.Calculation, "Calculation");
 
             Pager.Adapter = adapter;
         }

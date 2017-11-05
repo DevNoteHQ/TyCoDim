@@ -15,20 +15,20 @@ using TSbb_Library;
 
 namespace TSbb_Android.Tabs
 {
-    class Berechnung : Fragment
+    class Calculations : Fragment
     {
-        TextView BerechnungNr1;
+        TextView CalculationNr1;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View rootView = inflater.Inflate(Resource.Layout.Berechnung, container, false);
-            BerechnungNr1 = rootView.FindViewById<TextView>(Resource.Id.Ergebnisse1);
-            UpdateBerechnung();
+            View rootView = inflater.Inflate(Resource.Layout.Calculations, container, false);
+            CalculationNr1 = rootView.FindViewById<TextView>(Resource.Id.Ergebnisse1);
+            UpdateCalculation();
             return rootView;
         }
 
-        public void UpdateBerechnung()
+        public void UpdateCalculation()
         {
-            BerechnungNr1.Text =
+            CalculationNr1.Text =
                 "fcd = fck / yc\nfcd = " + Convert.ToString(Calc.dFCD) + " kN/m^2\n\n" +
                 "fyd = fyd / ys\nfyd = " + Convert.ToString(Calc.dFYD) + " kN/cm^2\n\n" +
                 "dTräger = hTräger - cnom - 1,2 * ΦBew\ndTräger = " + Convert.ToString(Calc.dDTräger) + " m\n\n" +
