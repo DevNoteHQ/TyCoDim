@@ -5,8 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TSbb_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="300" Width="600" MinHeight="300" MinWidth="600">
+    <Grid Background="#FFF0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="300" MinWidth="200"/>
+            <ColumnDefinition MaxWidth="400" MinWidth="200"/>
+            <ColumnDefinition MinWidth="200"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="0" Grid.Column="0">
+            <StackPanel Margin="5">
+                <TextBlock TextWrapping="Wrap" Text="Betongüte:"/>
+                <ComboBox x:Name="BetonComboBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedIndex="0">
+                    <ComboBoxItem Content="C12/15"/>
+                    <ComboBoxItem Content="C16/20"/>
+                    <ComboBoxItem Content="C20/25"/>
+                    <ComboBoxItem Content="C25/30"/>
+                    <ComboBoxItem Content="C30/37"/>
+                    <ComboBoxItem Content="C35/45"/>
+                    <ComboBoxItem Content="C40/50"/>
+                    <ComboBoxItem Content="C45/55"/>
+                </ComboBox>
+                <TextBlock TextWrapping="Wrap" Text="Stahlgüte:"/>
+                <ComboBox x:Name="StahlComboBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedIndex="0">
+                    <ComboBoxItem Content="B500"/>
+                    <ComboBoxItem Content="B550"/>
+                </ComboBox>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="ΦBew = " Padding="0,5,5,0" Margin="0"/>
+                    <TextBox x:Name="PhiBewTextBox" Grid.Row="0" Grid.Column="1" InputScope="Number" Margin="0,5,0,5" MinWidth="0"/>
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text=" mm" Padding="0,5,0,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="bTräger = " Padding="0,5,5,0" Margin="0"/>
+                    <TextBox x:Name="bTrägerTextBox" Grid.Row="1" Grid.Column="1" InputScope="Number" Margin="0,5,0,5" MinWidth="0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text=" m" Padding="0,5,0,0"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="hTräger = " Padding="0,5,5,0" Margin="0"/>
+                    <TextBox x:Name="hTrägerTextBox" Grid.Row="2" Grid.Column="1" InputScope="Number" Margin="0,5,0,5" MinWidth="0"/>
+                    <TextBlock Grid.Row="2" Grid.Column="2" Text=" m" Padding="0,5,0,0"/>
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="MEd = " Padding="0,5,5,0" Margin="0"/>
+                    <TextBox x:Name="MEdTextBox" Grid.Row="3" Grid.Column="1" InputScope="Number" Margin="0,5,0,5" MinWidth="0"/>
+                    <TextBlock Grid.Row="3" Grid.Column="2" Text=" kN*m" Padding="0,5,0,0"/>
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="cnom = " Padding="0,5,5,0" Margin="0"/>
+                    <TextBox x:Name="cnomTextBox" Grid.Row="4" Grid.Column="1" InputScope="Number" Margin="0,5,0,5" MinWidth="0"/>
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text=" cm" Padding="0,5,0,0"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="0" Grid.Column="1">
+            <TextBlock Padding="5" Text=""/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="0" Grid.Column="2"/>
     </Grid>
 </Window>
