@@ -5,7 +5,7 @@ using Java.Lang;
 using Fragment = Android.Support.V4.App.Fragment;
 using FragmentManager = Android.Support.V4.App.FragmentManager;
 
-namespace TSbb_Android
+namespace TyCoDim_Android
 {
     class PageAdapter : FragmentPagerAdapter
     {

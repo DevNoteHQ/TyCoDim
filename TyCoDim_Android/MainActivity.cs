@@ -9,17 +9,18 @@ using System.Collections.Generic;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
-using TSbb_Android.Tabs;
+using TyCoDim_Android.Tabs;
 using Android.Support.V4.App;
 using ActionBar = Android.App.ActionBar;
 
-namespace TSbb_Android
+namespace TyCoDim_Android
 {
-    [Activity(Label = "TSbb", MainLauncher = true)]
+    [Activity(Label = "TyCoDim", MainLauncher = true)]
     public class MainActivity : FragmentActivity
     {
         ViewPager viewPager;
         Input Input = new Input();
+        Graphic Graphic = new Graphic();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -31,7 +32,7 @@ namespace TSbb_Android
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
 
-            ActionBar.Title = "TSbb";
+            ActionBar.Title = "TyCoDim";
 
             viewPager = (ViewPager)FindViewById(Resource.Id.pager);
             SetupViewPager(viewPager);
@@ -51,6 +52,7 @@ namespace TSbb_Android
             PageAdapter adapter = new PageAdapter(SupportFragmentManager);
             adapter.AddFragment(Input, "Input");
             adapter.AddFragment(Input.Calculation, "Calculation");
+            adapter.AddFragment(Graphic, "Graphic");
 
             Pager.Adapter = adapter;
         }

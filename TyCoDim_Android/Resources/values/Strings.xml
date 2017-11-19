@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">TSbb</string>
+  <string name="app_name">TyCoDim</string>
   
   <string name="BetonSpinner_Prompt">Element wählen...</string>
   <string-array name="BetonSpinner_Elements">
@@ -11,6 +11,7 @@
     <item>C35/45</item>
     <item>C40/50</item>
     <item>C45/55</item>
+    <item>C50/60</item>
   </string-array>
 
   <string name="StahlSpinner_Prompt">Element wählen...</string>

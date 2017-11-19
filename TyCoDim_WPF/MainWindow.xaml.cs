@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TSbb_WPF
+namespace TyCoDim_WPF
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml

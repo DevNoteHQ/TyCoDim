@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace TSbb_WPF
+namespace TyCoDim_WPF
 {
     /// <summary>
     /// Interaktionslogik für "App.xaml"

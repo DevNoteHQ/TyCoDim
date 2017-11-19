@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TSbb_WPF.Properties
+namespace TyCoDim_WPF.Properties
 {
 
 

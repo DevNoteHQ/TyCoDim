@@ -13,7 +13,7 @@ using Fragment = Android.Support.V4.App.Fragment;
 using FragmentManager = Android.Support.V4.App.FragmentManager;
 using TyCoDim_Library;
 
-namespace TSbb_Android.Tabs
+namespace TyCoDim_Android.Tabs
 {
     class Calculations : Fragment
     {

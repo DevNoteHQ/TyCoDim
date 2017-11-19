@@ -11,7 +11,7 @@ namespace TyCoDim_Library
         public static int iFCK = 0;
         public static int iFYK = 0;
 
-        public static double dPhiBew = 0;
+        public static double dPhiBew = 12;
         public static double dBTräger = 0;
         public static double dHTräger = 0;
         public static double dMEd = 0;
@@ -23,6 +23,7 @@ namespace TyCoDim_Library
         public static double dDTräger = 0;
         public static double dMd = 0;
         public static double dZ = 0;
+        public static double dE = 0;
         public static double dAserf = 0;
 
         public static void Calculate()
