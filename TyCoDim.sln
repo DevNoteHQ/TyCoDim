@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TyCoDim_WPF", "TyCoDim_WPF\TyCoDim_WPF.csproj", "{00A0D2EC-2ED0-4AFD-B1BB-B34DFB54F876}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TyCoDim_Library", "TyCoDim_Library\TyCoDim_Library.csproj", "{F170D274-609F-438F-A258-B392F5AE5B3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TyCoDim_Android", "TyCoDim_Android\TyCoDim_Android.csproj", "{F8084A97-F3B2-4605-8CB9-CBEC1CF3E3D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00A0D2EC-2ED0-4AFD-B1BB-B34DFB54F876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A0D2EC-2ED0-4AFD-B1BB-B34DFB54F876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A0D2EC-2ED0-4AFD-B1BB-B34DFB54F876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A0D2EC-2ED0-4AFD-B1BB-B34DFB54F876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F170D274-609F-438F-A258-B392F5AE5B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F170D274-609F-438F-A258-B392F5AE5B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F170D274-609F-438F-A258-B392F5AE5B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F170D274-609F-438F-A258-B392F5AE5B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8084A97-F3B2-4605-8CB9-CBEC1CF3E3D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8084A97-F3B2-4605-8CB9-CBEC1CF3E3D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8084A97-F3B2-4605-8CB9-CBEC1CF3E3D9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F8084A97-F3B2-4605-8CB9-CBEC1CF3E3D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8084A97-F3B2-4605-8CB9-CBEC1CF3E3D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8084A97-F3B2-4605-8CB9-CBEC1CF3E3D9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C1FB9BD-5DEF-44E1-84C6-C985547E46E0}
+	EndGlobalSection
+EndGlobal

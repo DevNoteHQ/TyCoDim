@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace TSbb_Library
+namespace TyCoDim_Library
 {
     public static partial class Calc
     {

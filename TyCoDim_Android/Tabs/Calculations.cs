@@ -11,7 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Fragment = Android.Support.V4.App.Fragment;
 using FragmentManager = Android.Support.V4.App.FragmentManager;
-using TSbb_Library;
+using TyCoDim_Library;
 
 namespace TSbb_Android.Tabs
 {
