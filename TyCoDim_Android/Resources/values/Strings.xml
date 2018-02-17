@@ -6,17 +6,25 @@
   <string-array name="BetonSpinner_Elements">
     <item>C12/15</item>
     <item>C16/20</item>
+    <item>C20/25</item>
     <item>C25/30</item>
     <item>C30/37</item>
     <item>C35/45</item>
     <item>C40/50</item>
     <item>C45/55</item>
     <item>C50/60</item>
+    <item>C55/67</item>
+    <item>C60/75</item>
+    <item>C70/85</item>
+    <item>C80/95</item>
+    <item>C90/105</item>
   </string-array>
 
   <string name="StahlSpinner_Prompt">Element wählen...</string>
   <string-array name="StahlSpinner_Elements">
-    <item>B500</item>
-    <item>B550</item>
+    <item>S420</item>
+    <item>S500</item>
+    <item>S550</item>
+    <item>S600</item>
   </string-array>
 </resources>

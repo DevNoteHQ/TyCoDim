@@ -20,8 +20,8 @@ namespace TyCoDim_Android.Tabs
         TextView GraphicNr1;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View rootView = inflater.Inflate(Resource.Layout.Calculations, container, false);
-            GraphicNr1 = rootView.FindViewById<TextView>(Resource.Id.Ergebnisse1);
+            View rootView = inflater.Inflate(Resource.Layout.Graphic, container, false);
+            GraphicNr1 = rootView.FindViewById<TextView>(Resource.Id.Graphic);
             GraphicNr1.Text = "Grafik Platzhalter";
             return rootView;
         }

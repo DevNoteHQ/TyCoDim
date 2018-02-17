@@ -17,20 +17,20 @@ namespace TyCoDim_Android.Tabs
 {
     class Input : Fragment
     {
-        public Calculations Calculation = new Calculations();
-
         Spinner BetonSpinner;
         Spinner StahlSpinner;
 
-        EditText bTräger;
-        EditText hTräger;
+        EditText bT;
+        EditText hT;
         EditText MEd;
         EditText cnom;
 
-        TextView TbTräger;
-        TextView ThTräger;
+        TextView TbT;
+        TextView ThT;
         TextView TMEd;
         TextView Tcnom;
+
+        TextView Aserf;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -39,32 +39,34 @@ namespace TyCoDim_Android.Tabs
             BetonSpinner = rootView.FindViewById<Spinner>(Resource.Id.BetonSpinner);
             StahlSpinner = rootView.FindViewById<Spinner>(Resource.Id.StahlSpinner);
 
-            bTräger = rootView.FindViewById<EditText>(Resource.Id.bTräger);
-            hTräger = rootView.FindViewById<EditText>(Resource.Id.hTräger);
+            bT = rootView.FindViewById<EditText>(Resource.Id.bT);
+            hT = rootView.FindViewById<EditText>(Resource.Id.hT);
             MEd = rootView.FindViewById<EditText>(Resource.Id.MEd);
             cnom = rootView.FindViewById<EditText>(Resource.Id.cnom);
 
-            TbTräger = rootView.FindViewById<TextView>(Resource.Id.TbTräger);
-            ThTräger = rootView.FindViewById<TextView>(Resource.Id.ThTräger);
+            TbT = rootView.FindViewById<TextView>(Resource.Id.TbT);
+            ThT = rootView.FindViewById<TextView>(Resource.Id.ThT);
             TMEd = rootView.FindViewById<TextView>(Resource.Id.TMEd);
             Tcnom = rootView.FindViewById<TextView>(Resource.Id.Tcnom);
 
-            TbTräger.Text = "bTräger = ";
-            ThTräger.Text = "hTräger = ";
+            Aserf = rootView.FindViewById<TextView>(Resource.Id.Aserf);
+
+            TbT.Text = "bT = ";
+            ThT.Text = "hT = ";
             TMEd.Text = "MEd = ";
             Tcnom.Text = "cnom = ";
 
             BetonSpinner.ItemSelected += BetonSpinner_ItemSelected;
             StahlSpinner.ItemSelected += StahlSpinner_ItemSelected;
 
-            bTräger.TextChanged += BTräger_TextChanged;
-            hTräger.TextChanged += HTräger_TextChanged;
+            bT.TextChanged += BTräger_TextChanged;
+            hT.TextChanged += HTräger_TextChanged;
             MEd.TextChanged += MEd_TextChanged;
             cnom.TextChanged += Cnom_TextChanged;
 
-            var BetonSpinnerAdapter = ArrayAdapter.CreateFromResource(rootView.Context, Resource.Array.BetonSpinner_Elements, Android.Resource.Layout.SimpleSpinnerItem);
+            var BetonSpinnerAdapter = ArrayAdapter.CreateFromResource(rootView.Context, Resource.Array.BetonSpinner_Elements, Android.Resource.Layout.SimpleSpinnerItem); //Resources->values->Strings.xml
             BetonSpinnerAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-            var StahlSpinnerAdapter = ArrayAdapter.CreateFromResource(rootView.Context, Resource.Array.StahlSpinner_Elements, Android.Resource.Layout.SimpleSpinnerItem);
+            var StahlSpinnerAdapter = ArrayAdapter.CreateFromResource(rootView.Context, Resource.Array.StahlSpinner_Elements, Android.Resource.Layout.SimpleSpinnerItem); //Resources->values->Strings.xml
             StahlSpinnerAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
             BetonSpinner.Adapter = BetonSpinnerAdapter;
@@ -79,7 +81,7 @@ namespace TyCoDim_Android.Tabs
             {
                 Calc.dCnom = Convert.ToDouble(cnom.Text);
                 Calc.Calculate();
-                Calculation.UpdateCalculation();
+                UpdateGUI();
             }
             catch
             {
@@ -93,7 +95,7 @@ namespace TyCoDim_Android.Tabs
             {
                 Calc.dMEd = Convert.ToDouble(MEd.Text);
                 Calc.Calculate();
-                Calculation.UpdateCalculation();
+                UpdateGUI();
             }
             catch
             {
@@ -105,9 +107,9 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.dHTräger = Convert.ToDouble(hTräger.Text);
+                Calc.dHT = Convert.ToDouble(hT.Text);
                 Calc.Calculate();
-                Calculation.UpdateCalculation();
+                UpdateGUI();
             }
             catch
             {
@@ -119,9 +121,9 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.dBTräger = Convert.ToDouble(bTräger.Text);
+                Calc.dBT = Convert.ToDouble(bT.Text);
                 Calc.Calculate();
-                Calculation.UpdateCalculation();
+                UpdateGUI();
             }
             catch
             {
@@ -131,32 +133,21 @@ namespace TyCoDim_Android.Tabs
 
         private void BetonSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
-            switch (BetonSpinner.SelectedItemPosition)
-            {
-                case 0: Calc.iFCK = 12; break;
-                case 1: Calc.iFCK = 16; break;
-                case 2: Calc.iFCK = 25; break;
-                case 3: Calc.iFCK = 30; break;
-                case 4: Calc.iFCK = 35; break;
-                case 5: Calc.iFCK = 40; break;
-                case 6: Calc.iFCK = 45; break;
-                case 7: Calc.iFCK = 50; break;
-                default: Calc.iFCK = 12; break;
-            }
+            Calc.GetBeton(BetonSpinner.SelectedItem.ToString());
             Calc.Calculate();
-            Calculation.UpdateCalculation();
+            UpdateGUI();
         }
 
         private void StahlSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
-            switch (StahlSpinner.SelectedItemPosition)
-            {
-                case 0: Calc.iFYK = 500; break;
-                case 1: Calc.iFYK = 550; break;
-                default: Calc.iFYK = 500; break;
-            }
+            Calc.GetStahl(StahlSpinner.SelectedItem.ToString());
             Calc.Calculate();
-            Calculation.UpdateCalculation();
+            UpdateGUI();
+        }
+
+        private void UpdateGUI()
+        {
+            Aserf.Text = "Aserf = " + Calc.dAserf + " cm²";
         }
     }
 }

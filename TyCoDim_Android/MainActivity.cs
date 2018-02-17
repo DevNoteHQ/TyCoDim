@@ -51,7 +51,6 @@ namespace TyCoDim_Android
 
             PageAdapter adapter = new PageAdapter(SupportFragmentManager);
             adapter.AddFragment(Input, "Input");
-            adapter.AddFragment(Input.Calculation, "Calculation");
             adapter.AddFragment(Graphic, "Graphic");
 
             Pager.Adapter = adapter;
