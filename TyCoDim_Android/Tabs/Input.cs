@@ -79,7 +79,7 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.dCnom = Convert.ToDouble(cnom.Text);
+                Calc.Cnom = Convert.ToDouble(cnom.Text);
                 Calc.Calculate();
                 UpdateGUI();
             }
@@ -93,7 +93,7 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.dMEd = Convert.ToDouble(MEd.Text);
+                Calc.MEd = Convert.ToDouble(MEd.Text);
                 Calc.Calculate();
                 UpdateGUI();
             }
@@ -107,7 +107,7 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.dHT = Convert.ToDouble(hT.Text);
+                Calc.HT = Convert.ToDouble(hT.Text);
                 Calc.Calculate();
                 UpdateGUI();
             }
@@ -121,7 +121,7 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.dBT = Convert.ToDouble(bT.Text);
+                Calc.BT = Convert.ToDouble(bT.Text);
                 Calc.Calculate();
                 UpdateGUI();
             }
@@ -147,7 +147,7 @@ namespace TyCoDim_Android.Tabs
 
         private void UpdateGUI()
         {
-            Aserf.Text = "Aserf = " + Calc.dAserf + " cm²";
+            Aserf.Text = "Aserf = " + Calc.Aserf + " cm²";
         }
     }
 }
