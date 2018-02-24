@@ -118,6 +118,17 @@ namespace TyCoDim_Library
             }
         }
 
+        public static void GetGk(string Auswahl)
+        {
+            switch (Auswahl)
+            {
+                case "16mm": Gk = 16; break;
+                case "22mm": Gk = 22; break;
+                case "32mm": Gk = 32; break;
+                default:     Gk = 16; break;
+            }
+        }
+
         public static void Calculate()
         {
             switch(Mode)

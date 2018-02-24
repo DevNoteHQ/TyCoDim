@@ -19,6 +19,7 @@ namespace TyCoDim_Android.Tabs
     {
         Spinner BetonSpinner;
         Spinner StahlSpinner;
+        Spinner GkSpinner;
 
         EditText bT;
         EditText hT;
@@ -38,6 +39,7 @@ namespace TyCoDim_Android.Tabs
 
             BetonSpinner = rootView.FindViewById<Spinner>(Resource.Id.BetonSpinner);
             StahlSpinner = rootView.FindViewById<Spinner>(Resource.Id.StahlSpinner);
+            GkSpinner = rootView.FindViewById<Spinner>(Resource.Id.GkSpinner);
 
             bT = rootView.FindViewById<EditText>(Resource.Id.bT);
             hT = rootView.FindViewById<EditText>(Resource.Id.hT);
@@ -58,6 +60,7 @@ namespace TyCoDim_Android.Tabs
 
             BetonSpinner.ItemSelected += BetonSpinner_ItemSelected;
             StahlSpinner.ItemSelected += StahlSpinner_ItemSelected;
+            GkSpinner.ItemSelected += GkSpinner_ItemSelected;
 
             bT.TextChanged += BTräger_TextChanged;
             hT.TextChanged += HTräger_TextChanged;
@@ -68,9 +71,12 @@ namespace TyCoDim_Android.Tabs
             BetonSpinnerAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             var StahlSpinnerAdapter = ArrayAdapter.CreateFromResource(rootView.Context, Resource.Array.StahlSpinner_Elements, Android.Resource.Layout.SimpleSpinnerItem); //Resources->values->Strings.xml
             StahlSpinnerAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            var GkSpinnerAdapter = ArrayAdapter.CreateFromResource(rootView.Context, Resource.Array.GkSpinner_Elements, Android.Resource.Layout.SimpleSpinnerItem); //Resources->values->Strings.xml
+            GkSpinnerAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
             BetonSpinner.Adapter = BetonSpinnerAdapter;
             StahlSpinner.Adapter = StahlSpinnerAdapter;
+            GkSpinner.Adapter = GkSpinnerAdapter;
 
             return rootView;
         }
@@ -141,6 +147,13 @@ namespace TyCoDim_Android.Tabs
         private void StahlSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Calc.GetStahl(StahlSpinner.SelectedItem.ToString());
+            Calc.Calculate();
+            UpdateGUI();
+        }
+
+        private void GkSpinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Calc.GetGk(GkSpinner.SelectedItem.ToString());
             Calc.Calculate();
             UpdateGUI();
         }

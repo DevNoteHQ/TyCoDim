@@ -32,6 +32,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/StahlSpinner" />
+      <TextView
+            android:text="Größtkorn:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/GkLabel" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/GkSpinner" />
         <TableLayout
             android:minWidth="25px"
             android:minHeight="25px"

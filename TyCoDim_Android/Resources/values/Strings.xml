@@ -27,4 +27,11 @@
     <item>S550</item>
     <item>S600</item>
   </string-array>
+
+  <string name="GkSpinner_Prompt">Element wählen...</string>
+  <string-array name="GkSpinner_Elements">
+    <item>16mm</item>
+    <item>22mm</item>
+    <item>32mm</item>
+  </string-array>
 </resources>
