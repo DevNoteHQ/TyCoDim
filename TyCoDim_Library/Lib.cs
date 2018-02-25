@@ -48,6 +48,9 @@ namespace TyCoDim_Library
         //Stahlquerschnitte
         private static double[][] As = new double[11][];
 
+        //Bewehrung
+        public static int[][] Bewehrung = new int[3][];
+
         static Calc()
         {
             As[0]  = new double[] {  0.503,  1.01,  1.51,  2.01,  2.51,   3.02,   3.52,   4.02,   4.52,   5.03 };
@@ -61,6 +64,10 @@ namespace TyCoDim_Library
             As[8]  = new double[] { 10.180, 20.36, 30.54, 40.72, 50.90,  61.08,  71.26,  81.44,  91.62, 101.80 };
             As[9]  = new double[] { 12.570, 25.14, 37.71, 50.28, 62.85,  75.42,  87.99, 100.56, 113.13, 125.70 };
             As[10] = new double[] { 19.630, 39.26, 58.89, 78.52, 98.15, 117.78, 137.41, 157.04, 176.67, 196.30 };
+
+            Bewehrung[0] = new int[2];
+            Bewehrung[1] = new int[2];
+            Bewehrung[2] = new int[2];
         }
 
         private static int AsIndexToCrossSection(int Index)
@@ -142,8 +149,15 @@ namespace TyCoDim_Library
         private static bool CheckDistance(int st, int dS)
         {
             double e = 0;
-            e = (100 * BT - 2 * Cnom - 0.24 * DBue - 0.12 * dS * st) / (st - 1);
-            if ((e >= 2) && (e >= dS) && (e >= 0.1 * Gk))
+            try
+            {
+                e = (100 * BT - 2 * Cnom - 0.24 * DBue - 0.12 * dS * st) / (st - 1);
+            }
+            catch
+            {
+
+            }
+            if ((e >= 2) && (e >= 0.1 * dS) && (e >= 0.1 * Gk))
             {
                 return true;
             }
@@ -157,6 +171,10 @@ namespace TyCoDim_Library
         {
             try
             {
+                Bewehrung[0][0] = 0; Bewehrung[0][1] = 0;
+                Bewehrung[1][0] = 0; Bewehrung[1][1] = 0;
+                Bewehrung[2][0] = 0; Bewehrung[2][1] = 0;
+
                 FCD = FCK / YC * 1000;
                 FYD = FYK / YS * 0.1;
 
@@ -172,36 +190,44 @@ namespace TyCoDim_Library
                 Zeta = 0.5 * (1 + Math.Sqrt(1 - 4 * (Lamda / Kappa) * Md));
                 Aserf = Math.Round(MEd / (Zeta * DT * FYD), 4);
 
-                int[][] Bemaßung = new int[3][];
-                Bemaßung[0] = new int[2];
-                Bemaßung[0] = new int[2];
-                Bemaßung[0] = new int[2];
-
-                for (int d = 0, st = 0, b = 0; b < 3; st++)
+                if(Aserf <= 0)
+                {
+                    return;
+                }
+                for (int d = 0, st = 0, b = 0; b < 3;)
                 {
                     if(As[d][st] >= Aserf)
                     {
                         int dS = AsIndexToCrossSection(d);
-                        if (CheckDistance(st + 1,dS))
+                        if (CheckDistance(st + 1, dS))
                         {
-                            Bemaßung[b][0] = dS;
-                            Bemaßung[b][1] = st + 1;
+                            Bewehrung[b][0] = dS;
+                            Bewehrung[b][1] = st + 1;
                             b++;
+                            d++;
+                            st = 0;
+                        }
+                        else
+                        {
                             d++;
                             st = 0;
                         }
                     }
                     else
                     {
-                        if (st > 9)
+                        if (st >= 9)
                         {
-                            if (d > 10)
+                            if (d >= 10)
                             {
                                 //Keine bzw. zu wenige Querschnitt gefunden
                                 return;
                             }
                             d++;
                             st = 0;
+                        }
+                        else
+                        {
+                            st++;
                         }
                     }
                 }

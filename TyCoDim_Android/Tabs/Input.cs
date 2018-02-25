@@ -32,6 +32,7 @@ namespace TyCoDim_Android.Tabs
         TextView Tcnom;
 
         TextView Aserf;
+        TextView Bew;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -52,6 +53,7 @@ namespace TyCoDim_Android.Tabs
             Tcnom = rootView.FindViewById<TextView>(Resource.Id.Tcnom);
 
             Aserf = rootView.FindViewById<TextView>(Resource.Id.Aserf);
+            Bew = rootView.FindViewById<TextView>(Resource.Id.Bew);
 
             TbT.Text = "bT = ";
             ThT.Text = "hT = ";
@@ -77,6 +79,10 @@ namespace TyCoDim_Android.Tabs
             BetonSpinner.Adapter = BetonSpinnerAdapter;
             StahlSpinner.Adapter = StahlSpinnerAdapter;
             GkSpinner.Adapter = GkSpinnerAdapter;
+
+            BetonSpinner.SetSelection(3);
+            StahlSpinner.SetSelection(2);
+            GkSpinner.SetSelection(1);
 
             return rootView;
         }
@@ -161,6 +167,13 @@ namespace TyCoDim_Android.Tabs
         private void UpdateGUI()
         {
             Aserf.Text = "Aserf = " + Calc.Aserf + " cm²";
+            Bew.Text = "Bewehrungsauswahl:\n";
+            Bew.Text += Calc.Bewehrung[0][1] + "x " + Calc.Bewehrung[0][0] + "mm - Asvor = " + 
+                Math.Round(Math.Pow(Calc.Bewehrung[0][0] / 2, 2) * Math.PI * Calc.Bewehrung[0][1] * 0.01, 2) + " cm²\n";
+            Bew.Text += Calc.Bewehrung[1][1] + "x " + Calc.Bewehrung[1][0] + "mm - Asvor = " +
+                Math.Round(Math.Pow(Calc.Bewehrung[1][0] / 2, 2) * Math.PI * Calc.Bewehrung[1][1] * 0.01, 2) + " cm²\n";
+            Bew.Text += Calc.Bewehrung[2][1] + "x " + Calc.Bewehrung[2][0] + "mm - Asvor = " +
+                Math.Round(Math.Pow(Calc.Bewehrung[2][0] / 2, 2) * Math.PI * Calc.Bewehrung[2][1] * 0.01, 2) + " cm²\n";
         }
     }
 }
