@@ -36,8 +36,8 @@
 
 #Visual Studio
 .vs/
+packages/
 
 #TSbb_Android:
 **/bin/
 **/obj/
-packages/
