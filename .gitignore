@@ -37,6 +37,7 @@
 #Visual Studio
 .vs/
 packages/
+releases/
 
 #TSbb_Android:
 **/bin/
