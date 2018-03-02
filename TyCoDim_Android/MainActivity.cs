@@ -19,6 +19,7 @@ namespace TyCoDim_Android
     public class MainActivity : FragmentActivity
     {
         ViewPager viewPager;
+        TabLayout tabLayout;
         Input Input = new Input();
         Graphic Graphic = new Graphic();
 
@@ -30,12 +31,15 @@ namespace TyCoDim_Android
             SetContentView(Resource.Layout.Main);
 
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            toolbar.SetTitleTextColor(Android.Graphics.Color.White);
             SetActionBar(toolbar);
 
             ActionBar.Title = "TyCoDim";
 
-            viewPager = (ViewPager)FindViewById(Resource.Id.pager);
+            viewPager = (ViewPager) FindViewById(Resource.Id.pager);
+            tabLayout = (TabLayout) FindViewById(Resource.Id.tabs);
             SetupViewPager(viewPager);
+            tabLayout.SetupWithViewPager(viewPager, true);
 
             viewPager.PageSelected += ViewPager_PageSelected;
         }
@@ -50,8 +54,8 @@ namespace TyCoDim_Android
             Pager.OffscreenPageLimit = 2;
 
             PageAdapter adapter = new PageAdapter(SupportFragmentManager);
-            adapter.AddFragment(Input, "Input");
-            adapter.AddFragment(Graphic, "Graphic");
+            adapter.AddFragment(Input, "");
+            adapter.AddFragment(Graphic, "");
 
             Pager.Adapter = adapter;
         }

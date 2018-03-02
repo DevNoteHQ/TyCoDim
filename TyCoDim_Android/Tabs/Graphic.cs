@@ -22,7 +22,7 @@ namespace TyCoDim_Android.Tabs
         {
             View rootView = inflater.Inflate(Resource.Layout.Graphic, container, false);
             GraphicNr1 = rootView.FindViewById<TextView>(Resource.Id.Graphic);
-            GraphicNr1.Text = "Grafik Platzhalter";
+            GraphicNr1.Text = "Grafik Platzhalter\nWork in Progress";
             return rootView;
         }
     }

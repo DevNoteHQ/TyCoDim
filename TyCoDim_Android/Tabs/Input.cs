@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 
 using Android.App;
 using Android.Content;
@@ -91,7 +92,7 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.Cnom = Convert.ToDouble(cnom.Text);
+                Calc.Cnom = double.Parse(cnom.Text.Replace(',', '.'), NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
                 Calc.Calculate();
                 UpdateGUI();
             }
@@ -105,7 +106,7 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.MEd = Convert.ToDouble(MEd.Text);
+                Calc.MEd = double.Parse(MEd.Text.Replace(',', '.'), NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
                 Calc.Calculate();
                 UpdateGUI();
             }
@@ -119,7 +120,7 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.HT = Convert.ToDouble(hT.Text);
+                Calc.HT = double.Parse(hT.Text.Replace(',', '.'), NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
                 Calc.Calculate();
                 UpdateGUI();
             }
@@ -133,7 +134,7 @@ namespace TyCoDim_Android.Tabs
         {
             try
             {
-                Calc.BT = Convert.ToDouble(bT.Text);
+                Calc.BT = double.Parse(bT.Text.Replace(',', '.'), NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
                 Calc.Calculate();
                 UpdateGUI();
             }

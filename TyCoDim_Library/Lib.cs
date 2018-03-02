@@ -45,26 +45,11 @@ namespace TyCoDim_Library
         public static double Zeta = 0;
         public static double Aserf = 0; //Erforderliche Fläche
 
-        //Stahlquerschnitte
-        private static double[][] As = new double[11][];
-
         //Bewehrung
         public static int[][] Bewehrung = new int[3][];
 
         static Calc()
         {
-            As[0]  = new double[] {  0.503,  1.01,  1.51,  2.01,  2.51,   3.02,   3.52,   4.02,   4.52,   5.03 };
-            As[1]  = new double[] {  0.785,  1.57,  2.36,  3.14,  3.93,   4.71,   5.50,   6.28,   7.07,   7.85 };
-            As[2]  = new double[] {  1.130,  2.26,  3.39,  4.52,  5.65,   6.79,   7.92,   9.05,  10.18,  11.31 };
-            As[3]  = new double[] {  1.540,  3.08,  4.62,  6.16,  7.70,   9.24,  10.78,  12.32,  13.85,  15.39 };
-            As[4]  = new double[] {  2.010,  4.02,  6.03,  8.04, 10.05,  12.06,  14.07,  16.08,  18.10,  20.11 };
-            As[5]  = new double[] {  3.140,  6.28,  9.42, 12.57, 15.71,  18.85,  21.99,  25.13,  28.27,  31.42 };
-            As[6]  = new double[] {  5.310, 10.62, 15.93, 21.24, 26.55,  31.86,  37.17,  42.47,  47.78,  53.09 };
-            As[7]  = new double[] {  7.070, 14.14, 21.21, 28.27, 35.34,  42.41,  49.48,  56.55,  63.62,  70.69 };
-            As[8]  = new double[] { 10.180, 20.36, 30.54, 40.72, 50.90,  61.08,  71.26,  81.44,  91.62, 101.80 };
-            As[9]  = new double[] { 12.570, 25.14, 37.71, 50.28, 62.85,  75.42,  87.99, 100.56, 113.13, 125.70 };
-            As[10] = new double[] { 19.630, 39.26, 58.89, 78.52, 98.15, 117.78, 137.41, 157.04, 176.67, 196.30 };
-
             Bewehrung[0] = new int[2];
             Bewehrung[1] = new int[2];
             Bewehrung[2] = new int[2];
@@ -188,34 +173,34 @@ namespace TyCoDim_Library
                 }
                 Xi = 1.202 * (1 - Math.Sqrt(1 - 4 * (Lamda / Kappa) * Md));
                 Zeta = 0.5 * (1 + Math.Sqrt(1 - 4 * (Lamda / Kappa) * Md));
-                Aserf = Math.Round(MEd / (Zeta * DT * FYD), 4);
+                Aserf = Math.Round(MEd / (Zeta * DT * FYD), 2);
 
                 if(Aserf <= 0)
                 {
                     return;
                 }
-                for (int d = 0, st = 0, b = 0; b < 3;)
+                for (int d = 0, stk = 1, b = 0; b < 3;)
                 {
-                    if(As[d][st] >= Aserf)
+                    int dS = AsIndexToCrossSection(d);
+                    if (GetAs(stk, dS) >= Aserf)
                     {
-                        int dS = AsIndexToCrossSection(d);
-                        if (CheckDistance(st + 1, dS))
+                        if (CheckDistance(stk, dS))
                         {
                             Bewehrung[b][0] = dS;
-                            Bewehrung[b][1] = st + 1;
+                            Bewehrung[b][1] = stk;
                             b++;
                             d++;
-                            st = 0;
+                            stk = 1;
                         }
                         else
                         {
                             d++;
-                            st = 0;
+                            stk = 1;
                         }
                     }
                     else
                     {
-                        if (st >= 9)
+                        if (stk >= 10)
                         {
                             if (d >= 10)
                             {
@@ -223,11 +208,11 @@ namespace TyCoDim_Library
                                 return;
                             }
                             d++;
-                            st = 0;
+                            stk = 1;
                         }
                         else
                         {
-                            st++;
+                            stk++;
                         }
                     }
                 }
@@ -247,6 +232,11 @@ namespace TyCoDim_Library
             {
 
             }
+        }
+
+        private static double GetAs(int stk, int dS)
+        {
+            return Math.Round(Math.Pow(dS / 2, 2) * Math.PI * stk * 0.01, 2);
         }
     }
 }
