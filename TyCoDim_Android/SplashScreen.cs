@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace TyCoDim_Android
 {
-    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, Immersive = true, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
