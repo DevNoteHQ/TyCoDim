@@ -1,6 +1,7 @@
 ﻿using System;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
@@ -15,7 +16,7 @@ using ActionBar = Android.App.ActionBar;
 
 namespace TyCoDim_Android
 {
-    [Activity(Label = "TyCoDim", Icon = "@drawable/icon", MainLauncher = true)]
+    [Activity(Label = "TyCoDim", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : FragmentActivity
     {
         ViewPager viewPager;

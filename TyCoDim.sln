@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TyCoDim_Library", "TyCoDim_Library\TyCoDim_Library.csproj", "{F170D274-609F-438F-A258-B392F5AE5B3A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TyCoDim_Android", "TyCoDim_Android\TyCoDim_Android.csproj", "{F8084A97-F3B2-4605-8CB9-CBEC1CF3E3D9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F170D274-609F-438F-A258-B392F5AE5B3A} = {F170D274-609F-438F-A258-B392F5AE5B3A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

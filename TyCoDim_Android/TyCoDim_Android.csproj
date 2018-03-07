@@ -110,6 +110,7 @@
     <Compile Include="PageAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="SplashScreen.cs" />
     <Compile Include="Tabs\Graphic.cs" />
     <Compile Include="Tabs\Input.cs" />
   </ItemGroup>
@@ -125,6 +126,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Graphic.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SplashScreen.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -149,12 +153,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TyCoDim_Library\TyCoDim_Library.csproj">
-      <Project>{f170d274-609f-438f-a258-b392f5ae5b3a}</Project>
-      <Name>TyCoDim_Library</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\tab_indicator_selected.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +163,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TyCoDim_Library\TyCoDim_Library.csproj">
+      <Project>{f170d274-609f-438f-a258-b392f5ae5b3a}</Project>
+      <Name>TyCoDim_Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets')" />
