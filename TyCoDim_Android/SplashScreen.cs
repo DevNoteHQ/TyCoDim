@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace TyCoDim_Android
 {
-    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true, ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -22,6 +22,8 @@ namespace TyCoDim_Android
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SplashScreen);
         }
+
+        public override void OnBackPressed() { }
 
         // Launches the startup task
         protected override void OnResume()

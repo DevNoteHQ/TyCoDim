@@ -41,13 +41,11 @@ namespace TyCoDim_Android
             tabLayout = (TabLayout) FindViewById(Resource.Id.tabs);
             SetupViewPager(viewPager);
             tabLayout.SetupWithViewPager(viewPager, true);
-
-            viewPager.PageSelected += ViewPager_PageSelected;
         }
 
-        private void ViewPager_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
+        public override void OnBackPressed()
         {
-            
+            viewPager.SetCurrentItem(0, true);
         }
 
         private void SetupViewPager(ViewPager Pager)
