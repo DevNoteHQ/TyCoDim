@@ -4,6 +4,7 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
+using Android.Views.InputMethods;
 using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
@@ -37,10 +38,26 @@ namespace TyCoDim_Android
 
             ActionBar.Title = "TyCoDim";
 
-            viewPager = (ViewPager) FindViewById(Resource.Id.pager);
-            tabLayout = (TabLayout) FindViewById(Resource.Id.tabs);
+            viewPager = (ViewPager)FindViewById(Resource.Id.pager);
+            tabLayout = (TabLayout)FindViewById(Resource.Id.tabs);
             SetupViewPager(viewPager);
             tabLayout.SetupWithViewPager(viewPager, true);
+
+            viewPager.PageSelected += ViewPager_PageSelected;
+        }
+
+        private void ViewPager_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
+        {
+            if (e.Position == 1)
+            {
+                //In your graphic fragment, hide the keyboard.
+                var im = ((InputMethodManager)GetSystemService(Android.Content.Context.InputMethodService));
+
+                if (CurrentFocus != null)
+                {
+                    im.HideSoftInputFromWindow(CurrentFocus.WindowToken, HideSoftInputFlags.None);
+                }
+            }
         }
 
         public override void OnBackPressed()
