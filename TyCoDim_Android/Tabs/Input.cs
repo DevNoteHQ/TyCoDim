@@ -167,14 +167,27 @@ namespace TyCoDim_Android.Tabs
 
         private void UpdateGUI()
         {
+            if (Calc.MdGU)
+            {
+                Aserf.Text = "Aserf = " + double.NaN + " cm²";
+                Bew.Text = "MdGrenz wurde überschritten!";
+                return;
+            }
             Aserf.Text = "Aserf = " + Calc.Aserf + " cm²";
             Bew.Text = "Bewehrungsauswahl:\n";
-            Bew.Text += Calc.Bewehrung[0][1] + "x " + Calc.Bewehrung[0][0] + "mm - Asvor = " + 
-                Math.Round(Math.Pow(Calc.Bewehrung[0][0] / 2, 2) * Math.PI * Calc.Bewehrung[0][1] * 0.01, 2) + " cm²\n";
-            Bew.Text += Calc.Bewehrung[1][1] + "x " + Calc.Bewehrung[1][0] + "mm - Asvor = " +
-                Math.Round(Math.Pow(Calc.Bewehrung[1][0] / 2, 2) * Math.PI * Calc.Bewehrung[1][1] * 0.01, 2) + " cm²\n";
-            Bew.Text += Calc.Bewehrung[2][1] + "x " + Calc.Bewehrung[2][0] + "mm - Asvor = " +
-                Math.Round(Math.Pow(Calc.Bewehrung[2][0] / 2, 2) * Math.PI * Calc.Bewehrung[2][1] * 0.01, 2) + " cm²\n";
+            if (Calc.Bewehrungen)
+            {
+                Bew.Text += Calc.Bewehrung[0][1] + "x " + Calc.Bewehrung[0][0] + "mm - Asvor = " +
+                    Math.Round(Math.Pow(Calc.Bewehrung[0][0] / 2, 2) * Math.PI * Calc.Bewehrung[0][1] * 0.01, 2) + " cm²\n";
+                Bew.Text += Calc.Bewehrung[1][1] + "x " + Calc.Bewehrung[1][0] + "mm - Asvor = " +
+                    Math.Round(Math.Pow(Calc.Bewehrung[1][0] / 2, 2) * Math.PI * Calc.Bewehrung[1][1] * 0.01, 2) + " cm²\n";
+                Bew.Text += Calc.Bewehrung[2][1] + "x " + Calc.Bewehrung[2][0] + "mm - Asvor = " +
+                    Math.Round(Math.Pow(Calc.Bewehrung[2][0] / 2, 2) * Math.PI * Calc.Bewehrung[2][1] * 0.01, 2) + " cm²\n";
+            }
+            else
+            {
+                Bew.Text += "Keine gültigen Bewehrungen gefunden!";
+            }
         }
     }
 }

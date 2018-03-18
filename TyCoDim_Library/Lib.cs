@@ -47,6 +47,8 @@ namespace TyCoDim_Library
 
         //Bewehrung
         public static int[][] Bewehrung = new int[3][];
+        public static bool Bewehrungen = false;
+        public static bool MdGU = false;
 
         static Calc()
         {
@@ -166,17 +168,19 @@ namespace TyCoDim_Library
                 DT = HT - Cnom * 0.01 - (0.0012 * DsT) / 2 - 0.0012 * DBue;
                 D1 = Cnom + 0.012 * DBue + (0.012 * DsT) / 2;
                 Md = MEd / (BT * DT * DT * FCD);
-                if(Md > MdG)
-                {
-                    //Fehlermeldung ausgeben!
-                    return;
-                }
                 Xi = 1.202 * (1 - Math.Sqrt(1 - 4 * (Lamda / Kappa) * Md));
                 Zeta = 0.5 * (1 + Math.Sqrt(1 - 4 * (Lamda / Kappa) * Md));
                 Aserf = Math.Round(MEd / (Zeta * DT * FYD), 2);
-
-                if(Aserf <= 0)
+                if (Md > MdG)
                 {
+                    MdGU = true;
+                    Bewehrungen = false;
+                    return;
+                }
+                MdGU = false;
+                if (Aserf <= 0)
+                {
+                    Bewehrungen = false;
                     return;
                 }
                 for (int d = 0, stk = 1, b = 0; b < 3;)
@@ -204,7 +208,7 @@ namespace TyCoDim_Library
                         {
                             if (d >= 10)
                             {
-                                //Keine bzw. zu wenige Querschnitt gefunden
+                                Bewehrungen = false;
                                 return;
                             }
                             d++;
@@ -216,10 +220,10 @@ namespace TyCoDim_Library
                         }
                     }
                 }
+                Bewehrungen = true;
             }
             catch
             {
-
             }
         }
         private static void CalculateP()
