@@ -48,6 +48,13 @@
             android:textColor="#fff"
             android:background="@android:color/transparent"
             android:layout_gravity="center_horizontal"
+            android:text="Idee: Dipl.-Ing. Dr. Georg Strobl" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_horizontal"
             android:text="Berechnungen: Maurice Walch - Manuel Rief" />
     </LinearLayout>
 </RelativeLayout>
