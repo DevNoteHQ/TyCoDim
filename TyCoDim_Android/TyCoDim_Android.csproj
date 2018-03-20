@@ -166,7 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TyCoDim_Library\TyCoDim_Library.csproj">
-      <Project>{f170d274-609f-438f-a258-b392f5ae5b3a}</Project>
+      <Project>{4e1a88e4-0931-420f-8c46-1a2d78a65a10}</Project>
       <Name>TyCoDim_Library</Name>
     </ProjectReference>
   </ItemGroup>
