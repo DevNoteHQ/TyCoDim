@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * 
+ * This file is part of TyCoDim.
+ * TyCoDim is a program to calculate reinforced concrete beams
+ * 
+ * Copyright (C) 2018 Mathias Schöpf <schoepf.mathias@gmail.com>
+ *
+ * TyCoDim is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * TyCoDim is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with TyCoDim. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ -->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:id="@+id/InputScrollView">
+    android:layout_height="fill_parent">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -11,8 +33,7 @@
             android:text="Betongüte:"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/BetonLabel" />
+            android:layout_height="wrap_content" />
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,8 +42,7 @@
             android:text="Stahlgüte:"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/StahlLabel" />
+            android:layout_height="wrap_content" />
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,8 +51,7 @@
             android:text="Größtkorn:"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/GkLabel" />
+            android:layout_height="wrap_content" />
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,80 +62,69 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tableLayout1">
-            <TableRow
-                android:id="@+id/tableRow2">
+            <TableRow>
                 <TextView
-                    android:text="bT"
+                    android:text="bT = "
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/TbT" />
+                    android:layout_column="0" />
                 <EditText
                     android:inputType="numberDecimal"
-                    android:layout_column="1"
                     android:id="@+id/bT"
-                    android:layout_weight=".75" />
+                    android:layout_weight=".75"
+                    android:layout_column="1" />
                 <TextView
                     android:text="m"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:id="@+id/textView13" />
+                    android:layout_column="2" />
             </TableRow>
             <TableRow
                 android:id="@+id/tableRow3"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="hT"
+                    android:text="hT = "
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/ThT" />
+                    android:layout_column="0" />
                 <EditText
                     android:inputType="numberDecimal"
-                    android:layout_column="1"
                     android:id="@+id/hT"
-                    android:layout_weight=".75" />
+                    android:layout_weight=".75"
+                    android:layout_column="1" />
                 <TextView
                     android:text="m"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:id="@+id/textView15" />
+                    android:layout_column="2" />
             </TableRow>
             <TableRow
-                android:id="@+id/tableRow4"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="MEd"
+                    android:text="MEd = "
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/TMEd" />
+                    android:layout_column="0" />
                 <EditText
                     android:inputType="numberDecimal"
-                    android:layout_column="1"
                     android:id="@+id/MEd"
-                    android:layout_weight=".75" />
+                    android:layout_weight=".75"
+                    android:layout_column="1" />
                 <TextView
                     android:text="kN*m"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:id="@+id/textView17" />
+                    android:layout_column="2" />
             </TableRow>
             <TableRow
-                android:id="@+id/tableRow5"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="cnom"
+                    android:text="cnom = "
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/Tcnom" />
+                    android:layout_column="0" />
                 <EditText
                     android:inputType="numberDecimal"
-                    android:layout_column="1"
                     android:id="@+id/cnom"
-                    android:layout_weight=".75" />
+                    android:layout_weight=".75"
+                    android:layout_column="1" />
                 <TextView
                     android:text="cm"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="2"
-                    android:id="@+id/textView19" />
+                    android:layout_column="2" />
             </TableRow>
         </TableLayout>
         <TextView
