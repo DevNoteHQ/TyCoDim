@@ -119,7 +119,7 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\values\colors.xml">
+    <AndroidResource Include="Resources\values\Colors.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Input.axml">
@@ -148,7 +148,7 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\style.xml">
+    <AndroidResource Include="Resources\values\Style.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

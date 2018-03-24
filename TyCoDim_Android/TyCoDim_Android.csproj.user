@@ -4,6 +4,6 @@
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <SelectedDevice>Nexus_5</SelectedDevice>
     <DefaultDevice>Nexus_5</DefaultDevice>
-    <AndroidDesignerPreferredTheme>MyTheme</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
