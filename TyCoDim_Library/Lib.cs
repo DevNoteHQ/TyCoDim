@@ -77,7 +77,7 @@ namespace TyCoDim_Library
             Bewehrung[2] = new int[2];
         }
 
-        //Wendelt eine Index-Angabe in den entsprechenden Querschnitt um
+        //Wandelt eine Index-Angabe in den entsprechenden Querschnitt um
         private static int AsIndexToCrossSection(int Index)
         {
             int Querschnitt = 0;

@@ -53,7 +53,7 @@ namespace TyCoDim_Android
         ViewPager viewPager;
         TabLayout tabLayout;
 
-        //Deklaration der beiden Fragemente, die dann mit dem ViewPager angezeigt werden
+        //Deklaration der beiden Fragmente, die dann mit dem ViewPager angezeigt werden
         Input Input = new Input();
         Graphic Graphic = new Graphic();
 
@@ -98,7 +98,7 @@ namespace TyCoDim_Android
             }
         }
 
-        //Überschreibt das OnBackPressed-Event, damit der Ladebildschirm nicht wieder auftaucht.
+        //Überschreibt das OnBackPressed-Event, damit der Ladebildschirm nicht wiederauftaucht.
         //Drückt man nun "Zurück", wird man nur auf die Eingabe-Seite weitergeleitet
         public override void OnBackPressed()
         {

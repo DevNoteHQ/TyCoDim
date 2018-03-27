@@ -51,7 +51,7 @@ namespace TyCoDim_Android
             SetContentView(Resource.Layout.SplashScreen); //Setzt die aktuelle Sicht auf SplashScreen.axml
         }
 
-        //Damit auf dem Ladebildschirm keine unerwünschte Zustände entstehen,
+        //Damit auf dem Ladebildschirm keine unerwünschten Zustände entstehen,
         //wird das OnBackPressed() Event überschrieben, sodass diese nichts macht
         public override void OnBackPressed() { }
 
